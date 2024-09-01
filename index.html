@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة خنوش يوسف</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>مدونة خنوش يوسف</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#islamic-counters">Islamic Counters</a>
+            <a href="#quotes">Quotes</a>
+            <a href="#calendar">Calendar</a>
+            <a href="#prayer-times">Prayer Times</a>
+            <a href="#calligraphy">Calligraphy</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>مرحبا بك في موقع يوسف</h2>
+            <p>بسم الله الرحمن الرحيم</p>
+            <p> خنوش يوسف، المولود في الجزائر، من مواليد 1977، أب لعائلة ذات اربعة اولاد و زوج حنون، اسعى للعمل في الدنيا و الاخرة، وفقنا الله و اياكم</p>
+        </section>
+
+        <section id="calculator">
+            <h2>الة يوسف الحسابية</h2>
+            <div class="calculator">
+                <input type="text" id="display" disabled>
+                <div class="buttons">
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="appendDisplay('7')">7</button>
+                    <button onclick="appendDisplay('8')">8</button>
+                    <button onclick="appendDisplay('9')">9</button>
+                    <button onclick="appendDisplay('/')">/</button>
+
+                    <button onclick="appendDisplay('4')">4</button>
+                    <button onclick="appendDisplay('5')">5</button>
+                    <button onclick="appendDisplay('6')">6</button>
+                    <button onclick="appendDisplay('*')">*</button>
+
+                    <button onclick="appendDisplay('1')">1</button>
+                    <button onclick="appendDisplay('2')">2</button>
+                    <button onclick="appendDisplay('3')">3</button>
+                    <button onclick="appendDisplay('-')">-</button>
+
+                    <button onclick="appendDisplay('0')">0</button>
+                    <button onclick="appendDisplay('.')">.</button>
+                    <button onclick="calculate()">=</button>
+                    <button onclick="appendDisplay('+')">+</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="islamic-counters">
+            <h2>منصة يوسف الصديق الاسلامية</h2>
+            <p>عليكم بذكر الله تعالى فإنّه دواء، وإياكم وذكر الناس فإنّه داء</p>
+            <div class="counter-container">
+                <div class="counter" id="counter1" onclick="decreaseCounter('counter1')">
+                    <span class="count">33</span>
+                    <span class="label">الحمدلله</span>
+                </div>
+                <div class="counter" id="counter2" onclick="decreaseCounter('counter2')">
+                    <span class="count">33</span>
+                    <span class="label">سبحان الله</span>
+                </div>
+                <div class="counter" id="counter3" onclick="decreaseCounter('counter3')">
+                    <span class="count">33</span>
+                    <span class="label">الله اكبر</span>
+                </div>
+            </div>
+            <div class="middle-counter" id="middleCounter" onclick="decreaseCounter('middleCounter')">
+                <span class="count">1</span>
+                <span class="label">لا اله الا الله وحده لا شريك له، له الملك و له الحمد و هو على كل شيء قدير</span>
+            </div>
+        </section>
+
+        <section id="quotes">
+            <h2>احاديث و اقوال دينية</h2>
+            <p id="quote">"لا يؤمن أحدكم حتى أكون أحب إليه من والده وولده والناس أجمعين - رواه البخاري ومسلم</p>
+        </section>
+
+        <section id="calendar">
+            <h2>مواقيت الصلاة</h2>
+            <div id="التوقيت الهجري"></div>
+        </section>
+
+        <section id="prayer-times">
+            <h2>مواقيت الصلاة</h2>
+            <p id="صلاة الفجر">Fajr: 05:00 AM</p>
+            <p id="صلاة الظهر">Dhuhr: 12:00 PM</p>
+            <p id="صلاة العصر">Asr: 03:30 PM</p>
+            <p id="صلاة المغرب">Maghrib: 06:45 PM</p>
+            <p id="صلاة العشاء">Isha: 08:00 PM</p>
+        </section>
+
+    
+    </main>
+
+    <footer>
+        <p>&copy; 2024 مدونة يوسف. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

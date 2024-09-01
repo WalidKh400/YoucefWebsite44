@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('https://i.pinimg.com/736x/2e/8b/9a/2e8b9a1a8ad9762cfffcfce1d974410c.jpg') repeat-x;
+    background-size: cover;
+    animation: moveBackground 20s linear infinite;
+    direction: rtl;
+    color: white; /* Default text color for body */
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -2000px 0;
+    }
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: white; /* Header and titles text color */
+}
+
+.calculator {
+    display: inline-block;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calculator input {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #666;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-gap: 10px;
+}
+
+.calculator button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background-color: #777;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.counter, .middle-counter {
+    background-color: rgba(221, 221, 221, 0.8);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 30px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter:hover, .middle-counter:hover {
+    background-color: rgba(187, 187, 187, 0.8);
+}
+
+.counter:active, .middle-counter:active {
+    box-shadow: 0 0 20px 5px green; /* Green glow effect */
+}
+
+.counter.zero, .middle-counter.zero {
+    background-color: red;
+    color: white;
+}
+
+/* Animation for the star shine effect */
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: yellow;
+    border-radius: 50%;
+    opacity: 0;
+    animation: starAnimation 1s ease-out forwards;
+}
+
+@keyframes starAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+        background-color: yellow;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+        background-color: green;
+    }
+}
+
+#quote, #hijri-calendar, #prayer-times {
+    font-size: 18px;
+    margin: 20px;
+}
+
+#calligraphy-canvas {
+    border: 1px solid #ddd;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: white;
+    padding: 10px;
+}
